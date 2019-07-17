@@ -39,7 +39,9 @@ function Planets() {
                 return <PlanetCards 
                         date={planetType.date} 
                         explanation={planetType.explanation} 
-                        hdurl={planetType.hdurl} 
+                        hdurl={planetType.hdurl}
+                        title={planetType.title}
+                        copyright={planetType.copyright} 
                         />
             })}
         </div>
