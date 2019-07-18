@@ -9,7 +9,7 @@ function Planets() {
     useEffect(() => {
 
         // Will need to create a for loop to log mulitple planet queries on the dom.
-        const counter = 5;
+        const counter = 25;
 
         // const dateArray = ['2012-03-14','2012-03-15','2012-03-16','2012-03-17', '2012-03-18'];
 
@@ -29,7 +29,7 @@ function Planets() {
                     // Will need to update the planet variable with new response data.
                     // Can't create a planet array within the useEffect() hook.
                     const planetObject = response.data 
-                    
+
                     setPlanet( previousState => {
                         return [...previousState, planetObject]
                     }
