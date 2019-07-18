@@ -9,7 +9,7 @@ function Planets() {
     useEffect(() => {
 
         // Will need to create a for loop to log mulitple planet queries on the dom.
-        const counter = 25;
+        const counter = 5;
 
         // const dateArray = ['2012-03-14','2012-03-15','2012-03-16','2012-03-17', '2012-03-18'];
 
