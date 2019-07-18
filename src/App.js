@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import Planets from './components/Planets';
 
-import "./App.css";
+// no more need for App.css
+// import "./App.css";
 
 /*
 // import api key:
@@ -23,15 +24,15 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14
 */
 
 // converting .App div layer into a styled-component.
-const App = styled.div`
+const AppDiv = styled.div`
   text-align: center;
 `;
 
 function App() {
   return (
-    <App>
+    <AppDiv>
       <Planets />
-    </App>
+    </AppDiv>
   );
 }
 
