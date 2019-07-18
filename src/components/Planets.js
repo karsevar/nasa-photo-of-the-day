@@ -24,7 +24,7 @@ function Planets() {
         for(let i=0; i < counter; i++) {
 
             axios 
-                .get(`https://api.nasa.gov/planetary/apod?api_key=v0uiXBdS2nDZXSwnqMZkNxa1d7014rZx6uL3khd6&date=2012-03-${14+i}`)
+                .get(`https://api.nasa.gov/planetary/apod?api_key=v0uiXBdS2nDZXSwnqMZkNxa1d7014rZx6uL3khd6&date=2012-04-${14+i}`)
                 .then(response => {
 
                     // API check a single object was returned.
