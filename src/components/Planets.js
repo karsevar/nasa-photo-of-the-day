@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 import PlanetCards from './PlanetCards';
+import SingleLineGridList from './SingleLineGridList';
 
 // converted .planets-container div layer into a styled-component:
 const PlanetsContainer = styled.div`
@@ -24,7 +25,7 @@ function Planets() {
         for(let i=0; i < counter; i++) {
 
             axios 
-                .get(`https://api.nasa.gov/planetary/apod?api_key=v0uiXBdS2nDZXSwnqMZkNxa1d7014rZx6uL3khd6&date=2012-04-${14+i}`)
+                .get(`https://api.nasa.gov/planetary/apod?api_key=v0uiXBdS2nDZXSwnqMZkNxa1d7014rZx6uL3khd6&date=2013-04-${14+i}`)
                 .then(response => {
 
                     // API check a single object was returned.
@@ -66,7 +67,9 @@ function Planets() {
                         copyright={planetType.copyright} 
                         />
             })}
+        <SingleLineGridList tileData={planet} />
         </PlanetsContainer>
+        
     )
 }
 
