@@ -1,7 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
 import PlanetCards from './PlanetCards';
+
+// converted .planets-container div layer into a styled-component:
+const PlanetsContainer = styled.div`
+    max-width: 900px;
+    margin: 0 auto;
+`;
+
 
 function Planets() {
     const [planet, setPlanet] = useState([]);
@@ -47,7 +55,7 @@ function Planets() {
     
 
     return (
-        <div className='planets-container'>
+        <PlanetsContainer>
             {console.log('useState', planet)}
             {planet.map(planetType => {
                 return <PlanetCards 
@@ -58,7 +66,7 @@ function Planets() {
                         copyright={planetType.copyright} 
                         />
             })}
-        </div>
+        </PlanetsContainer>
     )
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 
 import Planets from './components/Planets';
 
@@ -21,11 +22,16 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2012-03-14
 
 */
 
+// converting .App div layer into a styled-component.
+const App = styled.div`
+  text-align: center;
+`;
+
 function App() {
   return (
-    <div className="App">
+    <App>
       <Planets />
-    </div>
+    </App>
   );
 }
 

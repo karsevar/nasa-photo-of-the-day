@@ -22,19 +22,31 @@ const PlanetImage = styled.img`
     margin-right: 20px;
 `;
 
+// convert planet-summary div layer into a component.
+const PlanetSummary = styled.div`
+    width: 50%;
+`;
+
+// convert planet-summary paragraph into a component.
+const PlanetParagraph = styled.p`
+    overflow-y: scroll;
+    height: 200px;
+`;
+
 
 function PlanetCards ({date, explanation, hdurl, title, copyright}) {
     return (
         <PlanetCard >
             {/* Curious if I need to include something else to have the styled components 
-            take in alt and src attributes */}
+            take in alt and src attributes. Update Cool img styled-components take in attributes 
+            without additional syntax.*/}
             <PlanetImage src={hdurl} alt={title} />
-            <div className='planet-summary'>
+            <PlanetSummary>
                 <h2>{title}</h2>
                 <h4>{date}</h4>
-                <p>{explanation}</p>
+                <PlanetParagraph>{explanation}</PlanetParagraph>
                 <p>{copyright}</p>
-            </div>
+            </PlanetSummary>
         </PlanetCard>
     )
 }
